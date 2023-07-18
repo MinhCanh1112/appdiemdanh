@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_chooseweek"
+            app:title="Chọn tuần"
+            android:background="@drawable/bg_toolbar">
+
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Chọn ngày điểm danh"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textSize="17sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:gravity="center|left"
+                android:id="@+id/chooseweek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="50dp">
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/txtweek"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"/>
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:id="@+id/txtyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_findweek"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textColor="@color/btn_textcolor"
+            android:background="@drawable/btn_bogoctron"
+            android:text="Tìm kiếm"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtdswtrong"
+                android:text="Danh sách trống"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone">
+            </TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_margin="5dp"
+                app:layout_constraintTop_toBottomOf="@id/txtdswtrong"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyc_chooseweek"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>

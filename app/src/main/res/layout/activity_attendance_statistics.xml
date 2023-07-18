@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_tkdd"
+            app:title="Thống kê điểm danh"
+            android:background="@drawable/bg_toolbar">
+        </androidx.appcompat.widget.Toolbar>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:layout_marginHorizontal="20dp">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_span="2"
+                    android:id="@+id/txtdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:text="Ngày điểm danh: "/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:text="Giờ vào: "
+                    android:gravity="center"
+                    android:id="@+id/txtgiovao"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="20dp" />
+                <TextView
+                    android:text="Giờ ra: "
+                    android:id="@+id/txtgiora"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="40dp"
+            android:stretchColumns="*">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtclass"
+                    android:text="Lớp: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtSiso"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:text="Sĩ số: "
+                    android:gravity="center|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Đã điểm danh: "
+                    android:id="@+id/txtDadiemdanh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:text="Vắng: "
+                    android:id="@+id/txtVang"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:gravity="center|left"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Đi trễ: "
+                    android:id="@+id/txtVaotre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center|left"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:text="Về sớm: "
+                    android:id="@+id/txtVesom"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:gravity="center|left"/>
+            </TableRow>
+        </TableLayout>
+
+
+    </LinearLayout>
+</layout>

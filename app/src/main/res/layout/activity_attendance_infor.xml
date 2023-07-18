@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data></data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_date"
+            app:title="Thông tin điểm danh"
+            android:background="@drawable/bg_toolbar">
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/toolbar_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="35dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                        <EditText
+                            android:enabled="false"
+                            android:id="@+id/edt_date_attendance"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="datetime"
+                            android:hint="Ngày điểm danh"
+                            android:textColor="#000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <EditText
+                            android:id="@+id/edt_timenow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="datetime"
+                            android:hint="Giờ hiện tại"
+                            android:textColor="#000" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:id="@+id/edt_timestart_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="datetime"
+                        android:hint="Giờ bắt đầu điểm danh"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:id="@+id/edt_timevao_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="datetime"
+                        android:hint="Giờ vào"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                    <EditText
+                        android:id="@+id/edt_timera_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="datetime"
+                        android:hint="Giờ ra"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_bogoctron"
+                    android:id="@+id/btn_updatetime"
+                    android:textColor="@color/btn_textcolor"
+                    android:text="Cập nhật"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_weight="2"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_bogoctron"
+                        android:id="@+id/btn_vesom"
+                        android:textColor="@color/btn_textcolor"
+                        android:text="Về sớm"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_bogoctron"
+                        android:id="@+id/btn_end"
+                        android:textColor="@color/btn_textcolor"
+                        android:text="Kết thúc điểm danh"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyc_vesom"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

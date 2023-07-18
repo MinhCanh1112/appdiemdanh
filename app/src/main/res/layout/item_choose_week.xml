@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_one_dialog"
+    android:layout_marginTop="10dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="2"
+            android:id="@+id/chooseweek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuần : 52"
+            android:textColor="#000"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/chooseyear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Năm : 2023"
+            android:textColor="#000"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

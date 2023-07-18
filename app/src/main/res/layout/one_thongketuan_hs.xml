@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="2dp">
+    <LinearLayout
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_datetk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2023-05-05"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_timevaotk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_timeratk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="01:01:01"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_trangthaitk"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Di hoc tre"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#1E000000"/>
+
+</LinearLayout>

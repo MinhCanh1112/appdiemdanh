@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activity.ListStudent">
+        <androidx.appcompat.widget.Toolbar
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar_dsdd"
+            app:title="Danh sách điểm danh"
+            android:background="@drawable/bg_toolbar">
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="30dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <TextView
+                        android:text="Lớp: "
+                        android:id="@+id/txttenlop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:gravity="center|left"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                    <TextView
+                        android:text="Sĩ số: "
+                        android:id="@+id/txtsiso"
+                        android:textColor="@color/black"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:textSize="17dp"
+                        android:gravity="center|left"/>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    <TextView
+                        android:text="Giờ vào: "
+                        android:id="@+id/txttimevao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:gravity="center|left"
+                        android:textColor="@color/black"
+                        android:textSize="17dp" />
+                    <TextView
+                        android:text="Giờ ra: "
+                        android:id="@+id/txttimera"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:textSize="17dp"
+                        android:gravity="center|left"/>
+                </TableRow>
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+        <TabHost
+            android:id="@+id/mytab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyc_vao"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyc_ra"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+</layout>

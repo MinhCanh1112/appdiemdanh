@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/homenav"
+            android:title="Trang chủ" />
+        <item
+            android:id="@+id/nav_dshs"
+            android:icon="@drawable/listnav"
+            android:title="Danh sách học sinh" />
+
+        <item
+            android:id="@+id/nav_attendWeek"
+            android:icon="@drawable/statistics"
+            android:title="Thống kê hàng tuần" />
+
+        <item
+            android:id="@+id/nav_inforuser"
+            android:icon="@drawable/personnav"
+            android:title="Thông tin tài khoản" />
+
+        <item
+            android:id="@+id/nav_out"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Đăng xuất" />
+    </group>
+
+
+</menu>

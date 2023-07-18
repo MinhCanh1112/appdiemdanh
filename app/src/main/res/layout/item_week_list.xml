@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="5dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pichsw"
+        android:layout_marginLeft="3dp"
+        android:layout_gravity="center"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/ic_people"
+        android:background="@drawable/btn_bogoctron" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="Mã UID: "
+                android:textSize="15dp"
+                android:textColor="#000" />
+            <TextView
+                android:layout_weight="1.6"
+                android:id="@+id/uidw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mã UID"
+                android:textSize="15dp"
+                android:textColor="#000" />
+            <TextView
+                android:gravity="center"
+                android:id="@+id/trew"
+                android:textSize="15sp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/vangw"
+                android:textSize="15sp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:gravity="center"
+                android:id="@+id/vesomw"
+                android:textSize="15sp"
+                android:text="0"
+                android:textColor="@color/black"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="Họ tên : "
+                android:textColor="#000"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/namew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="Mshs   : "
+                android:textColor="#000"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/mshsw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mshs"
+                android:textColor="#000"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1E000000"/>
+
+    </LinearLayout>
+
+</LinearLayout>
